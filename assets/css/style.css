@@ -4361,7 +4361,7 @@ section {
     content: "";
     width: 1px;
     height: 100%;
-    background-color: var(--border);
+    background-color: #ffffff76;
     top: 0;
     left: calc(50% - 2px);
     z-index: -1;
@@ -4378,7 +4378,7 @@ section {
     content: "";
     width: 1px;
     height: 100%;
-    background-color: var(--border);
+    background-color: #ffffff76;
     top: 0;
     left: calc(50% + 1px);
     z-index: -1;
@@ -18551,6 +18551,12 @@ only screen and (max-width: 1919px) {
     }
 }
 
+.ml-1{
+    margin-left: 1rem;
+}
+.ml-1 li{
+    color: var(--black-2) !important;
+}
 
 /* team list area style  */
 

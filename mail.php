@@ -11,11 +11,11 @@ class ContactForm {
         $this->fromEmail = $fromEmail;
     }
 
-    public function sendEmail($name, $email, $subject, $tel, $message) {
-        $email_content = $this->buildEmailContent($name, $email, $subject, $tel, $message);
+    public function sendEmail($name, $email, $tel, $message) {
+        $email_content = $this->buildEmailContent($name, $email, "Test", $tel, $message);
         $email_headers = $this->buildEmailHeaders();
 
-        if (mail($this->recipient, $subject, $email_content, $email_headers)) {
+        if (mail($this->recipient, "Test", $email_content, $email_headers)) {
             http_response_code(200);
             echo "Thank You! Your message has been sent.";
         } else {
@@ -24,12 +24,11 @@ class ContactForm {
         }
     }
 
-    private function buildEmailContent($name, $email, $subject, $tel, $message) {
+    private function buildEmailContent($name, $email, $tel, $message) {
         $content = "";
         $fields = array(
             "Name" => $name,
             "Email" => $email,
-            "Subject" => $subject,
             "Tel" => $tel,
             "Message" => $message
         );
